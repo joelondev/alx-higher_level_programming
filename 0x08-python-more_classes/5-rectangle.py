@@ -35,26 +35,26 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-                                                                                                                                                                                        self.__height = value
+        self.__height = value
 
-                                                                                                                                                                                            def __repr__(self):
-                                                                                                                                                                                                        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+    def __repr__(self):
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
-                                                                                                                                                                                                        def __str__(self):
-                                                                                                                                                                                                                    total = ""
-                                                                                                                                                                                                                            for i in range(self.__height):
-                                                                                                                                                                                                                                            total += ("#" * self.__width)
-                                                                                                                                                                                                                                                        if i is not self.__height - 1:
-                                                                                                                                                                                                                                                                            total += "\n"
-                                                                                                                                                                                                                                                                                    return total
+    def __str__(self):
+        total = ""
+        for i in range(self.__height):
+            total += ("#" * self.__width)
+            if i is not self.__height - 1:
+                total += "\n"
+                return total
 
-                                                                                                                                                                                                                                                                                    def __del__(self):
-                                                                                                                                                                                                                                                                                                print("Bye rectangle...")
+    def __del__(self):
+        print("Bye rectangle...")
 
-                                                                                                                                                                                                                                                                                                    def area(self):
-                                                                                                                                                                                                                                                                                                                return self.__width * self.__height
+    def area(self):
+        return self.__width * self.__height
 
-                                                                                                                                                                                                                                                                                                                def perimeter(self):
-                                                                                                                                                                                                                                                                                                                            if self.__width is 0 or self.__height is 0:
-                                                                                                                                                                                                                                                                                                                                            return 0
-                                                                                                                                                                                                                                                                                                                                                return (2 * self.__width) + (2 * self.__height)
+    def perimeter(self):
+        if self.__width is 0 or self.__height is 0:
+            return 0
+        return (2 * self.__width) + (2 * self.__height)
