@@ -1,3 +1,4 @@
 -- list all records of the second table
-SELECT TOP score, name FROM second_table
+SELECT score, name FROM second_table
+ORDER BY score DESC
  
